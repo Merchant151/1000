@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS companies(
 	market_cap VARCHAR(50)
 	);
 
-LOAD DATA INFILE '/home/captain/Documents/projects/online/1000/1000/Fortune_1000.csv'
+LOAD DATA LOCAL INFILE '/home/captain/Documents/projects/online/1000/1000/Fortune_1000.csv'
 INTO TABLE companies
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
