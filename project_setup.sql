@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS companies(
 	ceo_founder BOOLEAN,
 	ceo_woman BOOLEAN,
 	profitable BOOLEAN,
-	perv_rank INT,
+	prev_rank INT,
 	ceo VARCHAR(255),
 	website VARCHAR(255),
 	ticker VARCHAR(10),
@@ -33,8 +33,9 @@ LOAD DATA LOCAL INFILE '/home/captain/Documents/projects/online/1000/1000/Fortun
 INTO TABLE companies
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-
+IGNORE 1 LINES
+(company,rank,rank_change,revenue,profit,num_of_employees,sector,city,state,newcomer,ceo_founder,ceo_woman,profitable,prev_rank,ceo,website,ticker,market_cap)
+;
 SELECT *
 FROM companies
 LIMIT 5;
